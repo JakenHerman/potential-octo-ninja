@@ -15,27 +15,27 @@
 <script type="text/javascript" src="//www.shsu.edu/global/scripts/jquery-latest.min.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
-  $("#campustools").click(function () { 
-    $(".campustools").toggle();
-    $(".fastlinks").hide(); //hides the other dropdown when this one is clicked
-  });
-  $("#fastlinks").click(function () { 
-    $(".fastlinks").toggle();
-    $(".campustools").hide();//hides the other dropdown when this one is clicked
-  });
-  $('html').click(function() { //registers a click event anywhere on the document 
-      $(".dropdown").hide();   //hideas all dropdowns when you click the mouse anywhere 
-   }); 
- $('.dropdown-btn').click(function(event){
-     event.stopPropagation(); //stops the above action if the click is on either dropdown
- });
-});
+    $(document).ready(function () {
+        $("#campustools").click(function () {
+            $(".campustools").toggle();
+            $(".fastlinks").hide(); //hides the other dropdown when this one is clicked
+        });
+        $("#fastlinks").click(function () {
+            $(".fastlinks").toggle();
+            $(".campustools").hide(); //hides the other dropdown when this one is clicked
+        });
+        $('html').click(function () { //registers a click event anywhere on the document 
+            $(".dropdown").hide();   //hideas all dropdowns when you click the mouse anywhere 
+        });
+        $('.dropdown-btn').click(function (event) {
+            event.stopPropagation(); //stops the above action if the click is on either dropdown
+        });
+    });
 </script>
 <script type="text/javascript">
-  $(document).ready( function() {
-    $("#crumbs ul li:last-child").addClass('last');
-});
+    $(document).ready(function () {
+        $("#crumbs ul li:last-child").addClass('last');
+    });
 </script>
 
      <link href="/home/ngl.css" rel="stylesheet" type="text/css" />
@@ -45,7 +45,7 @@ $(document).ready(function() {
 <style>
 .lcs_chat_button {background-color: #dc741c!important; }
 </style>
-<script> var libchat_b46454af3270a3e59e82251b3b856903 = { iid:769, key:'be3b25071b82d75', width:'100%' }</script> <script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=b46454af3270a3e59e82251b3b856903&options=libchat_b46454af3270a3e59e82251b3b856903"></script>
+<script>    var libchat_b46454af3270a3e59e82251b3b856903 = { iid: 769, key: 'be3b25071b82d75', width: '100%' }</script> <script type="text/javascript" src="//v2.libanswers.com/load_chat.php?hash=b46454af3270a3e59e82251b3b856903&options=libchat_b46454af3270a3e59e82251b3b856903"></script>
 <!-- End Springshare Chat code //-->
 
 <div id="wrap"><a class="skip" href="#skip">Skip to content</a>
@@ -375,28 +375,28 @@ margin-bottom: 8px;
 
 
 <script type='text/javascript'>
-$(document).ready(function(){
-    $('ul.imagegallery img').resizecrop({
-      width: 146,
-      height: 146,
-      vertical:"top"
-    });  
-  });  
-$(".fancybox")
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    $(document).ready(function () {
+        $('ul.imagegallery img').resizecrop({
+            width: 146,
+            height: 146,
+            vertical: "top"
+        });
+    });
+    $(".fancybox")
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery')
     .fancybox({
-        beforeLoad: function() {
+        beforeLoad: function () {
             this.title = $(this.element).attr('caption');
         },
-    prevEffect  : 'none',
-    nextEffect  : 'none',
-    helpers  : {
-      title  : {
-        type: 'inside'
-      }
-    },
-        margin : [20, 80, 20, 80]
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        },
+        margin: [20, 80, 20, 80]
     });
 </script>
 <style type="text/css">
@@ -410,8 +410,8 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 .clearGallery {clear:both;}
 </style>
 
+<div style="display: none;">
 <ul class="imagegallery">
-
 
 
 
@@ -464,7 +464,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
   <br class="clearGallery"  />
 </ul>
   
-
+  </div>
 
 <div class="clear p4"></div>?
              	
@@ -485,28 +485,28 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 
 
 <script type='text/javascript'>
-$(document).ready(function(){
-    $('ul.imagegallery img').resizecrop({
-      width: 146,
-      height: 146,
-      vertical:"top"
-    });  
-  });  
-$(".fancybox")
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    $(document).ready(function () {
+        $('ul.imagegallery img').resizecrop({
+            width: 146,
+            height: 146,
+            vertical: "top"
+        });
+    });
+    $(".fancybox")
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery')
     .fancybox({
-        beforeLoad: function() {
+        beforeLoad: function () {
             this.title = $(this.element).attr('caption');
         },
-    prevEffect  : 'none',
-    nextEffect  : 'none',
-    helpers  : {
-      title  : {
-        type: 'inside'
-      }
-    },
-        margin : [20, 80, 20, 80]
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        },
+        margin: [20, 80, 20, 80]
     });
 </script>
 <style type="text/css">
@@ -520,10 +520,8 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 .clearGallery {clear:both;}
 </style>
 
+<div style="display: none;">
 <ul class="imagegallery">
-
-
-
 
   <li style="margin-left:4px;">
 <a href="http://www.shsu.edu/dotAsset/d1b9f58c-ea1c-441d-b7e0-cb4e9df3a414.jpg" class="fancybox" rel="gallery" caption="The student lounge just inside the main doors provides comfortable, casual meeting and study space. Dining Services operates a Starbucks Coffee shop here. Drinks WITH LIDS may be brought into the library, but food must be kept in the lounge.">
@@ -637,7 +635,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
   
   <br class="clearGallery"  />
 </ul>
-  
+</div>  
 
 
 <div class="clear p4"></div>?
@@ -659,28 +657,28 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 
 
 <script type='text/javascript'>
-$(document).ready(function(){
-    $('ul.imagegallery img').resizecrop({
-      width: 146,
-      height: 146,
-      vertical:"top"
-    });  
-  });  
-$(".fancybox")
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    $(document).ready(function () {
+        $('ul.imagegallery img').resizecrop({
+            width: 146,
+            height: 146,
+            vertical: "top"
+        });
+    });
+    $(".fancybox")
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery')
     .fancybox({
-        beforeLoad: function() {
+        beforeLoad: function () {
             this.title = $(this.element).attr('caption');
         },
-    prevEffect  : 'none',
-    nextEffect  : 'none',
-    helpers  : {
-      title  : {
-        type: 'inside'
-      }
-    },
-        margin : [20, 80, 20, 80]
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        },
+        margin: [20, 80, 20, 80]
     });
 </script>
 <style type="text/css">
@@ -694,10 +692,9 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 .clearGallery {clear:both;}
 </style>
 
+<div style="display:none;">
+
 <ul class="imagegallery">
-
-
-
 
   <li style="margin-left:4px;">
 <a href="http://www.shsu.edu/dotAsset/e846d4e3-a790-4fe8-9567-d3baae487eaa.jpg" class="fancybox" rel="gallery" caption="The third floor houses books with call numbers starting in LS and N through Z; the juvenile/young adult collection in the LS section uses Dewey Decimal call numbers, rather than the Library of Congress call numbers found in the rest of the collection.">
@@ -732,7 +729,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
   <br class="clearGallery"  />
 </ul>
   
-
+  </div>
 
 <div class="clear p4"></div>?
              	
@@ -753,28 +750,28 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 
 
 <script type='text/javascript'>
-$(document).ready(function(){
-    $('ul.imagegallery img').resizecrop({
-      width: 146,
-      height: 146,
-      vertical:"top"
-    });  
-  });  
-$(".fancybox")
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    $(document).ready(function () {
+        $('ul.imagegallery img').resizecrop({
+            width: 146,
+            height: 146,
+            vertical: "top"
+        });
+    });
+    $(".fancybox")
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery')
     .fancybox({
-        beforeLoad: function() {
+        beforeLoad: function () {
             this.title = $(this.element).attr('caption');
         },
-    prevEffect  : 'none',
-    nextEffect  : 'none',
-    helpers  : {
-      title  : {
-        type: 'inside'
-      }
-    },
-        margin : [20, 80, 20, 80]
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        },
+        margin: [20, 80, 20, 80]
     });
 </script>
 <style type="text/css">
@@ -788,10 +785,9 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 .clearGallery {clear:both;}
 </style>
 
+
+<div style="display:none;">
 <ul class="imagegallery">
-
-
-
 
   <li style="margin-left:4px;">
 <a href="http://www.shsu.edu/dotAsset/212ca273-45cd-4390-80bd-c42435b1034e.jpg" class="fancybox" rel="gallery" caption="The Breitenbach Mexican Mask Collection, donated by Professor William Breitenbach, displayed by the central staircase on the fourth floor. This is the fourth largest collection of Mexican masks in the world.">
@@ -850,7 +846,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
   <br class="clearGallery"  />
 </ul>
   
-
+  </div>
 
 <div class="clear p4"></div>?
              	
@@ -871,28 +867,28 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 
 
 <script type='text/javascript'>
-$(document).ready(function(){
-    $('ul.imagegallery img').resizecrop({
-      width: 146,
-      height: 146,
-      vertical:"top"
-    });  
-  });  
-$(".fancybox")
-$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    $(document).ready(function () {
+        $('ul.imagegallery img').resizecrop({
+            width: 146,
+            height: 146,
+            vertical: "top"
+        });
+    });
+    $(".fancybox")
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery')
     .fancybox({
-        beforeLoad: function() {
+        beforeLoad: function () {
             this.title = $(this.element).attr('caption');
         },
-    prevEffect  : 'none',
-    nextEffect  : 'none',
-    helpers  : {
-      title  : {
-        type: 'inside'
-      }
-    },
-        margin : [20, 80, 20, 80]
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'inside'
+            }
+        },
+        margin: [20, 80, 20, 80]
     });
 </script>
 <style type="text/css">
@@ -906,9 +902,8 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 .clearGallery {clear:both;}
 </style>
 
+<div style="display:none;">
 <ul class="imagegallery">
-
-
 
 
   <li style="margin-left:4px;">
@@ -1024,7 +1019,7 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
   <br class="clearGallery"  />
 </ul>
   
-
+  </div>
 
 <div class="clear p4"></div>?
          
@@ -1178,17 +1173,17 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
           
    <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-10614326-1']);
-  _gaq.push(['_setDomainName', 'shsu.edu']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
+       var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-10614326-1']);
+       _gaq.push(['_setDomainName', 'shsu.edu']);
+       _gaq.push(['_setAllowLinker', true]);
+       _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+       (function () {
+           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+           ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
 
 </script>    
 
@@ -1198,15 +1193,15 @@ $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
 
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-11144562-1']);
-  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11144562-1']);
+    _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
 </script>
   </body>
