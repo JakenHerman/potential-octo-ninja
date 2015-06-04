@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
-    
+   
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
    		<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=0" />
@@ -14,9 +14,7 @@
 
 <link href="//www.shsu.edu/styles/main2.css" rel="stylesheet" type="text/css" media="screen" />
 <link rel="stylesheet" href="//www.shsu.edu/styles/print2.css" type="text/css" media="print" />
-<script src="js/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
-<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />
-<script src="js/prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="//www.shsu.edu/global/scripts/jquery-latest.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -367,14 +365,15 @@ $(document).ready(function() {
 
 
 <script type="text/javascript" src="http://www.shsu.edu/scripts/resizecrop.min.js"></script>
-<script type="text/javascript" src="http://www.shsu.edu/scripts/fancybox/$.fancybox.js"></script>
-<link rel="stylesheet" type="text/css" href="http://www.shsu.edu/scripts/fancybox/$.fancybox.css" media="screen" />
+<script type="text/javascript" src="http://www.shsu.edu/scripts/fancybox/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.shsu.edu/scripts/fancybox/jquery.fancybox.css" media="screen" />
 
 <style>
 #left-col #primary-content ul.imagegallery li { 
 margin-bottom: 8px;
 }
 </style>
+
 
 
 <script type='text/javascript'>
@@ -384,9 +383,23 @@ $(document).ready(function(){
       height: 146,
       vertical:"top"
     });  
-    $('a[href$='.jpg'],a[href$='.png'],a[href$='.gif']').attr('rel', 'gallery');
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  }); 
+  });  
+$("a.fancybox")
+$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    .attr('rel', 'gallery')
+    .fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers  : {
+      title  : {
+        type: 'inside'
+      }
+    },
+        margin : [20, 80, 20, 80]
+    });
 </script>
 <style type="text/css">
 .fancybox-nav {width: 60px;}
@@ -405,48 +418,48 @@ $(document).ready(function(){
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/e70cda6d-cca1-47ad-b865-9c2c94a12f47.jpg" class="fancybox" rel="prettyPhoto" caption="Signs outside identify the library building and the services inside.">
-<img src="http://www.shsu.edu/dotAsset/e70cda6d-cca1-47ad-b865-9c2c94a12f47.jpg" class="fancybox" rel="prettyPhoto" alt="Signs outside identify the library building and the services inside." />
+<a href="http://www.shsu.edu/dotAsset/e70cda6d-cca1-47ad-b865-9c2c94a12f47.jpg" class="fancybox" rel="gallery" caption="Signs outside identify the library building and the services inside.">
+<img src="http://www.shsu.edu/dotAsset/e70cda6d-cca1-47ad-b865-9c2c94a12f47.jpg" class="fancybox" rel="gallery" alt="Signs outside identify the library building and the services inside." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/479c5115-328b-48c3-863d-122cbe014170.jpg" class="fancybox" rel="prettyPhoto" caption="The public entrance on the library's north side, near the University Theatre Center, is handicap-accessible, has an automatic door, and can be approached via a ramp from a parking lot on the east side which provides handicap parking.">
-<img src="http://www.shsu.edu/dotAsset/479c5115-328b-48c3-863d-122cbe014170.jpg" class="fancybox" rel="prettyPhoto" alt="The public entrance on the library's north side, near the University Theatre Center, is handicap-accessible, has an automatic door, and can be approached via a ramp from a parking lot on the east side which provides handicap parking." />
+<a href="http://www.shsu.edu/dotAsset/479c5115-328b-48c3-863d-122cbe014170.jpg" class="fancybox" rel="gallery" caption="The public entrance on the library's north side, near the University Theatre Center, is handicap-accessible, has an automatic door, and can be approached via a ramp from a parking lot on the east side which provides handicap parking.">
+<img src="http://www.shsu.edu/dotAsset/479c5115-328b-48c3-863d-122cbe014170.jpg" class="fancybox" rel="gallery" alt="The public entrance on the library's north side, near the University Theatre Center, is handicap-accessible, has an automatic door, and can be approached via a ramp from a parking lot on the east side which provides handicap parking." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/a4dc3f17-fdcc-448e-86f8-293f808c5b79.jpg" class="fancybox" rel="prettyPhoto" caption="The walkway along the building's north side leads to a first-floor public entrance. A bench and a small table with chairs are available on the north walkway as well.">
-<img src="http://www.shsu.edu/dotAsset/a4dc3f17-fdcc-448e-86f8-293f808c5b79.jpg" class="fancybox" rel="prettyPhoto" alt="The walkway along the building's north side leads to a first-floor public entrance. A bench and a small table with chairs are available on the north walkway as well." />
+<a href="http://www.shsu.edu/dotAsset/a4dc3f17-fdcc-448e-86f8-293f808c5b79.jpg" class="fancybox" rel="gallery" caption="The walkway along the building's north side leads to a first-floor public entrance. A bench and a small table with chairs are available on the north walkway as well.">
+<img src="http://www.shsu.edu/dotAsset/a4dc3f17-fdcc-448e-86f8-293f808c5b79.jpg" class="fancybox" rel="gallery" alt="The walkway along the building's north side leads to a first-floor public entrance. A bench and a small table with chairs are available on the north walkway as well." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/dcb7734d-4f8b-421a-9573-a2277941c294.jpg" class="fancybox" rel="prettyPhoto" caption="The library's east side features a large parking lot which includes handicap parking. The balcony on the east side has a convenient all-hours book-drop.">
-<img src="http://www.shsu.edu/dotAsset/dcb7734d-4f8b-421a-9573-a2277941c294.jpg" class="fancybox" rel="prettyPhoto" alt="The library's east side features a large parking lot which includes handicap parking. The balcony on the east side has a convenient all-hours book-drop." />
+<a href="http://www.shsu.edu/dotAsset/dcb7734d-4f8b-421a-9573-a2277941c294.jpg" class="fancybox" rel="gallery" caption="The library's east side features a large parking lot which includes handicap parking. The balcony on the east side has a convenient all-hours book-drop.">
+<img src="http://www.shsu.edu/dotAsset/dcb7734d-4f8b-421a-9573-a2277941c294.jpg" class="fancybox" rel="gallery" alt="The library's east side features a large parking lot which includes handicap parking. The balcony on the east side has a convenient all-hours book-drop." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/1ed9eb6b-3ce8-4050-8c99-9379a2b1492c.jpg" class="fancybox" rel="prettyPhoto" caption="The library's south side faces the Teacher Education Center; only library staff can enter the building on this side.">
-<img src="http://www.shsu.edu/dotAsset/1ed9eb6b-3ce8-4050-8c99-9379a2b1492c.jpg" class="fancybox" rel="prettyPhoto" alt="The library's south side faces the Teacher Education Center; only library staff can enter the building on this side." />
+<a href="http://www.shsu.edu/dotAsset/1ed9eb6b-3ce8-4050-8c99-9379a2b1492c.jpg" class="fancybox" rel="gallery" caption="The library's south side faces the Teacher Education Center; only library staff can enter the building on this side.">
+<img src="http://www.shsu.edu/dotAsset/1ed9eb6b-3ce8-4050-8c99-9379a2b1492c.jpg" class="fancybox" rel="gallery" alt="The library's south side faces the Teacher Education Center; only library staff can enter the building on this side." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/29e51430-6209-458d-8023-19a69fa05d5e.jpg" class="fancybox" rel="prettyPhoto" caption="The library's main entrance on the west side faces the interior of campus. The library's front patio features shaded outdoor seating.">
-<img src="http://www.shsu.edu/dotAsset/29e51430-6209-458d-8023-19a69fa05d5e.jpg" class="fancybox" rel="prettyPhoto" alt="The library's main entrance on the west side faces the interior of campus. The library's front patio features shaded outdoor seating." />
+<a href="http://www.shsu.edu/dotAsset/29e51430-6209-458d-8023-19a69fa05d5e.jpg" class="fancybox" rel="gallery" caption="The library's main entrance on the west side faces the interior of campus. The library's front patio features shaded outdoor seating.">
+<img src="http://www.shsu.edu/dotAsset/29e51430-6209-458d-8023-19a69fa05d5e.jpg" class="fancybox" rel="gallery" alt="The library's main entrance on the west side faces the interior of campus. The library's front patio features shaded outdoor seating." />
 </a>
 </li>
   
@@ -472,6 +485,7 @@ $(document).ready(function(){
 
 
 
+
 <script type='text/javascript'>
 $(document).ready(function(){
     $('ul.imagegallery img').resizecrop({
@@ -479,9 +493,23 @@ $(document).ready(function(){
       height: 146,
       vertical:"top"
     });  
-    $('a[href$='.jpg'],a[href$='.png'],a[href$='.gif']').attr('rel', 'gallery');
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  }); 
+  });  
+$("a.fancybox")
+$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    .attr('rel', 'gallery')
+    .fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers  : {
+      title  : {
+        type: 'inside'
+      }
+    },
+        margin : [20, 80, 20, 80]
+    });
 </script>
 <style type="text/css">
 .fancybox-nav {width: 60px;}
@@ -500,112 +528,112 @@ $(document).ready(function(){
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/d1b9f58c-ea1c-441d-b7e0-cb4e9df3a414.jpg" class="fancybox" rel="prettyPhoto" caption="The student lounge just inside the main doors provides comfortable, casual meeting and study space. Dining Services operates a Starbucks Coffee shop here. Drinks WITH LIDS may be brought into the library, but food must be kept in the lounge.">
-<img src="http://www.shsu.edu/dotAsset/d1b9f58c-ea1c-441d-b7e0-cb4e9df3a414.jpg" class="fancybox" rel="prettyPhoto" alt="The student lounge just inside the main doors provides comfortable, casual meeting and study space. Dining Services operates a Starbucks Coffee shop here. Drinks WITH LIDS may be brought into the library, but food must be kept in the lounge." />
+<a href="http://www.shsu.edu/dotAsset/d1b9f58c-ea1c-441d-b7e0-cb4e9df3a414.jpg" class="fancybox" rel="gallery" caption="The student lounge just inside the main doors provides comfortable, casual meeting and study space. Dining Services operates a Starbucks Coffee shop here. Drinks WITH LIDS may be brought into the library, but food must be kept in the lounge.">
+<img src="http://www.shsu.edu/dotAsset/d1b9f58c-ea1c-441d-b7e0-cb4e9df3a414.jpg" class="fancybox" rel="gallery" alt="The student lounge just inside the main doors provides comfortable, casual meeting and study space. Dining Services operates a Starbucks Coffee shop here. Drinks WITH LIDS may be brought into the library, but food must be kept in the lounge." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/33f8b249-375a-4c85-9eea-d2eb376f3ebc.jpg" class="fancybox" rel="prettyPhoto" caption="The library's main lobby contains the paperback “Browsing” collection, changing exhibits on a variety of topics, fraternity and sorority sign-in books, comfortable armchairs, an ATM, and six computers for searching the library's catalog (no Internet).">
-<img src="http://www.shsu.edu/dotAsset/33f8b249-375a-4c85-9eea-d2eb376f3ebc.jpg" class="fancybox" rel="prettyPhoto" alt="The library's main lobby contains the paperback “Browsing” collection, changing exhibits on a variety of topics, fraternity and sorority sign-in books, comfortable armchairs, an ATM, and six computers for searching the library's catalog (no Internet)." />
+<a href="http://www.shsu.edu/dotAsset/33f8b249-375a-4c85-9eea-d2eb376f3ebc.jpg" class="fancybox" rel="gallery" caption="The library's main lobby contains the paperback “Browsing” collection, changing exhibits on a variety of topics, fraternity and sorority sign-in books, comfortable armchairs, an ATM, and six computers for searching the library's catalog (no Internet).">
+<img src="http://www.shsu.edu/dotAsset/33f8b249-375a-4c85-9eea-d2eb376f3ebc.jpg" class="fancybox" rel="gallery" alt="The library's main lobby contains the paperback “Browsing” collection, changing exhibits on a variety of topics, fraternity and sorority sign-in books, comfortable armchairs, an ATM, and six computers for searching the library's catalog (no Internet)." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/98757980-accc-454a-9635-b01edf3aec90.jpg" class="fancybox" rel="prettyPhoto" caption="Stairs by the Reference Desk lead up to the 3rd and 4th floors, and down to the first floor near the Copy Services and Music Listening rooms. Trays beside the stairwell contain maps, library information sheets, MLA and APA citation guides, and more.">
-<img src="http://www.shsu.edu/dotAsset/98757980-accc-454a-9635-b01edf3aec90.jpg" class="fancybox" rel="prettyPhoto" alt="Stairs by the Reference Desk lead up to the 3rd and 4th floors, and down to the first floor near the Copy Services and Music Listening rooms. Trays beside the stairwell contain maps, library information sheets, MLA and APA citation guides, and more." />
+<a href="http://www.shsu.edu/dotAsset/98757980-accc-454a-9635-b01edf3aec90.jpg" class="fancybox" rel="gallery" caption="Stairs by the Reference Desk lead up to the 3rd and 4th floors, and down to the first floor near the Copy Services and Music Listening rooms. Trays beside the stairwell contain maps, library information sheets, MLA and APA citation guides, and more.">
+<img src="http://www.shsu.edu/dotAsset/98757980-accc-454a-9635-b01edf3aec90.jpg" class="fancybox" rel="gallery" alt="Stairs by the Reference Desk lead up to the 3rd and 4th floors, and down to the first floor near the Copy Services and Music Listening rooms. Trays beside the stairwell contain maps, library information sheets, MLA and APA citation guides, and more." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/34beb40c-159a-452b-8252-f902e64e17ae.jpg" class="fancybox" rel="prettyPhoto" caption="Reference Desk staff can assist you with questions about searching library resources, citing sources, library computers, and much more. The Reference Desk can also be reached by live chat, text, email, or telephone via “Ask a Librarian” on our website.">
-<img src="http://www.shsu.edu/dotAsset/34beb40c-159a-452b-8252-f902e64e17ae.jpg" class="fancybox" rel="prettyPhoto" alt="Reference Desk staff can assist you with questions about searching library resources, citing sources, library computers, and much more. The Reference Desk can also be reached by live chat, text, email, or telephone via “Ask a Librarian” on our website." />
+<a href="http://www.shsu.edu/dotAsset/34beb40c-159a-452b-8252-f902e64e17ae.jpg" class="fancybox" rel="gallery" caption="Reference Desk staff can assist you with questions about searching library resources, citing sources, library computers, and much more. The Reference Desk can also be reached by live chat, text, email, or telephone via “Ask a Librarian” on our website.">
+<img src="http://www.shsu.edu/dotAsset/34beb40c-159a-452b-8252-f902e64e17ae.jpg" class="fancybox" rel="gallery" alt="Reference Desk staff can assist you with questions about searching library resources, citing sources, library computers, and much more. The Reference Desk can also be reached by live chat, text, email, or telephone via “Ask a Librarian” on our website." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/5bc69928-fff3-411a-8a2f-4ed6ed2c6aa5.jpg" class="fancybox" rel="prettyPhoto" caption="The Reference section provides 28 student computers and 2 black/white printers. Visitors/guests may access the Internet on 1 public computer. Guest printing, color printing, and other services may be purchased in the Copy Room.">
-<img src="http://www.shsu.edu/dotAsset/5bc69928-fff3-411a-8a2f-4ed6ed2c6aa5.jpg" class="fancybox" rel="prettyPhoto" alt="The Reference section provides 28 student computers and 2 black/white printers. Visitors/guests may access the Internet on 1 public computer. Guest printing, color printing, and other services may be purchased in the Copy Room." />
+<a href="http://www.shsu.edu/dotAsset/5bc69928-fff3-411a-8a2f-4ed6ed2c6aa5.jpg" class="fancybox" rel="gallery" caption="The Reference section provides 28 student computers and 2 black/white printers. Visitors/guests may access the Internet on 1 public computer. Guest printing, color printing, and other services may be purchased in the Copy Room.">
+<img src="http://www.shsu.edu/dotAsset/5bc69928-fff3-411a-8a2f-4ed6ed2c6aa5.jpg" class="fancybox" rel="gallery" alt="The Reference section provides 28 student computers and 2 black/white printers. Visitors/guests may access the Internet on 1 public computer. Guest printing, color printing, and other services may be purchased in the Copy Room." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/8adc1df5-a225-4238-8d57-c9ce8669ed1d.jpg" class="fancybox" rel="prettyPhoto" caption="The Reference section contains dictionaries, encyclopedias, handbooks, manuals, guides, and directories. The west end (“K” call numbers) contains legal materials for criminal justice, business, and education students. Group study tables are nearby.">
-<img src="http://www.shsu.edu/dotAsset/8adc1df5-a225-4238-8d57-c9ce8669ed1d.jpg" class="fancybox" rel="prettyPhoto" alt="The Reference section contains dictionaries, encyclopedias, handbooks, manuals, guides, and directories. The west end (“K” call numbers) contains legal materials for criminal justice, business, and education students. Group study tables are nearby." />
+<a href="http://www.shsu.edu/dotAsset/8adc1df5-a225-4238-8d57-c9ce8669ed1d.jpg" class="fancybox" rel="gallery" caption="The Reference section contains dictionaries, encyclopedias, handbooks, manuals, guides, and directories. The west end (“K” call numbers) contains legal materials for criminal justice, business, and education students. Group study tables are nearby.">
+<img src="http://www.shsu.edu/dotAsset/8adc1df5-a225-4238-8d57-c9ce8669ed1d.jpg" class="fancybox" rel="gallery" alt="The Reference section contains dictionaries, encyclopedias, handbooks, manuals, guides, and directories. The west end (“K” call numbers) contains legal materials for criminal justice, business, and education students. Group study tables are nearby." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/82f18d26-11cc-4e7a-9a4c-6924879473a9.jpg" class="fancybox" rel="prettyPhoto" caption="The Adaptive Technology / ADA area provides hardware and software for students with special needs, such as impaired vision. Nearby, the Career and Grants collection here can help with researching careers, writing resumes, and finding financial aid.">
-<img src="http://www.shsu.edu/dotAsset/82f18d26-11cc-4e7a-9a4c-6924879473a9.jpg" class="fancybox" rel="prettyPhoto" alt="The Adaptive Technology / ADA area provides hardware and software for students with special needs, such as impaired vision. Nearby, the Career and Grants collection here can help with researching careers, writing resumes, and finding financial aid." />
+<a href="http://www.shsu.edu/dotAsset/82f18d26-11cc-4e7a-9a4c-6924879473a9.jpg" class="fancybox" rel="gallery" caption="The Adaptive Technology / ADA area provides hardware and software for students with special needs, such as impaired vision. Nearby, the Career and Grants collection here can help with researching careers, writing resumes, and finding financial aid.">
+<img src="http://www.shsu.edu/dotAsset/82f18d26-11cc-4e7a-9a4c-6924879473a9.jpg" class="fancybox" rel="gallery" alt="The Adaptive Technology / ADA area provides hardware and software for students with special needs, such as impaired vision. Nearby, the Career and Grants collection here can help with researching careers, writing resumes, and finding financial aid." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/6032b9aa-ded7-4a2f-94d8-27b4cfb8ee91.jpg" class="fancybox" rel="prettyPhoto" caption="The Current Periodicals area on the west side of the 2nd floor holds recent issues of newspapers, journals and magazines. Older issues are found on the 3rd or 4th floor, under the same call number used in Current Periodicals">
-<img src="http://www.shsu.edu/dotAsset/6032b9aa-ded7-4a2f-94d8-27b4cfb8ee91.jpg" class="fancybox" rel="prettyPhoto" alt="The Current Periodicals area on the west side of the 2nd floor holds recent issues of newspapers, journals and magazines. Older issues are found on the 3rd or 4th floor, under the same call number used in Current Periodicals" />
+<a href="http://www.shsu.edu/dotAsset/6032b9aa-ded7-4a2f-94d8-27b4cfb8ee91.jpg" class="fancybox" rel="gallery" caption="The Current Periodicals area on the west side of the 2nd floor holds recent issues of newspapers, journals and magazines. Older issues are found on the 3rd or 4th floor, under the same call number used in Current Periodicals">
+<img src="http://www.shsu.edu/dotAsset/6032b9aa-ded7-4a2f-94d8-27b4cfb8ee91.jpg" class="fancybox" rel="gallery" alt="The Current Periodicals area on the west side of the 2nd floor holds recent issues of newspapers, journals and magazines. Older issues are found on the 3rd or 4th floor, under the same call number used in Current Periodicals" />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/70ff50d4-70fa-493d-8293-423b21d18a4f.jpg" class="fancybox" rel="prettyPhoto" caption="The New Books Area near the northwest corner of the second floor highlights new and interesting items in the library's collection. This area features cozy chairs for reading and relaxing, as well as a mobile device charging station.">
-<img src="http://www.shsu.edu/dotAsset/70ff50d4-70fa-493d-8293-423b21d18a4f.jpg" class="fancybox" rel="prettyPhoto" alt="The New Books Area near the northwest corner of the second floor highlights new and interesting items in the library's collection. This area features cozy chairs for reading and relaxing, as well as a mobile device charging station." />
+<a href="http://www.shsu.edu/dotAsset/70ff50d4-70fa-493d-8293-423b21d18a4f.jpg" class="fancybox" rel="gallery" caption="The New Books Area near the northwest corner of the second floor highlights new and interesting items in the library's collection. This area features cozy chairs for reading and relaxing, as well as a mobile device charging station.">
+<img src="http://www.shsu.edu/dotAsset/70ff50d4-70fa-493d-8293-423b21d18a4f.jpg" class="fancybox" rel="gallery" alt="The New Books Area near the northwest corner of the second floor highlights new and interesting items in the library's collection. This area features cozy chairs for reading and relaxing, as well as a mobile device charging station." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/a13b4711-218d-4c84-a912-ebffb121dff4.jpg" class="fancybox" rel="prettyPhoto" caption="The Library Director's office is located in the northwest corner of the second floor. This office handles applications for graduate student study carrels, submission of theses and dissertations, and all administrative functions of the library.">
-<img src="http://www.shsu.edu/dotAsset/a13b4711-218d-4c84-a912-ebffb121dff4.jpg" class="fancybox" rel="prettyPhoto" alt="The Library Director's office is located in the northwest corner of the second floor. This office handles applications for graduate student study carrels, submission of theses and dissertations, and all administrative functions of the library." />
+<a href="http://www.shsu.edu/dotAsset/a13b4711-218d-4c84-a912-ebffb121dff4.jpg" class="fancybox" rel="gallery" caption="The Library Director's office is located in the northwest corner of the second floor. This office handles applications for graduate student study carrels, submission of theses and dissertations, and all administrative functions of the library.">
+<img src="http://www.shsu.edu/dotAsset/a13b4711-218d-4c84-a912-ebffb121dff4.jpg" class="fancybox" rel="gallery" alt="The Library Director's office is located in the northwest corner of the second floor. This office handles applications for graduate student study carrels, submission of theses and dissertations, and all administrative functions of the library." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/4a0995e8-f2e8-4775-a4fc-f545e677eef3.jpg" class="fancybox" rel="prettyPhoto" caption="Two elevators face the central staircase on the south side of every floor in the library.">
-<img src="http://www.shsu.edu/dotAsset/4a0995e8-f2e8-4775-a4fc-f545e677eef3.jpg" class="fancybox" rel="prettyPhoto" alt="Two elevators face the central staircase on the south side of every floor in the library." />
+<a href="http://www.shsu.edu/dotAsset/4a0995e8-f2e8-4775-a4fc-f545e677eef3.jpg" class="fancybox" rel="gallery" caption="Two elevators face the central staircase on the south side of every floor in the library.">
+<img src="http://www.shsu.edu/dotAsset/4a0995e8-f2e8-4775-a4fc-f545e677eef3.jpg" class="fancybox" rel="gallery" alt="Two elevators face the central staircase on the south side of every floor in the library." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/e8bf2f22-b6ef-4b3f-ab15-962f9e50b625.jpg" class="fancybox" rel="prettyPhoto" caption="Newton Gresham Library's Circulation desk is usually a hub of activity. Here you can check out books, pay fines, check out laptop computers for use in the library, and more. The Reserves desk is also located here.">
-<img src="http://www.shsu.edu/dotAsset/e8bf2f22-b6ef-4b3f-ab15-962f9e50b625.jpg" class="fancybox" rel="prettyPhoto" alt="Newton Gresham Library's Circulation desk is usually a hub of activity. Here you can check out books, pay fines, check out laptop computers for use in the library, and more. The Reserves desk is also located here." />
+<a href="http://www.shsu.edu/dotAsset/e8bf2f22-b6ef-4b3f-ab15-962f9e50b625.jpg" class="fancybox" rel="gallery" caption="Newton Gresham Library's Circulation desk is usually a hub of activity. Here you can check out books, pay fines, check out laptop computers for use in the library, and more. The Reserves desk is also located here.">
+<img src="http://www.shsu.edu/dotAsset/e8bf2f22-b6ef-4b3f-ab15-962f9e50b625.jpg" class="fancybox" rel="gallery" alt="Newton Gresham Library's Circulation desk is usually a hub of activity. Here you can check out books, pay fines, check out laptop computers for use in the library, and more. The Reserves desk is also located here." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/32bfe22d-61e8-4999-9b3d-a126029e003a.jpg" class="fancybox" rel="prettyPhoto" caption="Room 200 is an IT@Sam lab with 79 PCs, 3 Macs, 2 printers, 3 scanners, 2 ADA workstations, 1 projector, and 1 webcam. This room also contains vending machines (food must remain at tables), plays, and award-winning children's books.">
-<img src="http://www.shsu.edu/dotAsset/32bfe22d-61e8-4999-9b3d-a126029e003a.jpg" class="fancybox" rel="prettyPhoto" alt="Room 200 is an IT@Sam lab with 79 PCs, 3 Macs, 2 printers, 3 scanners, 2 ADA workstations, 1 projector, and 1 webcam. This room also contains vending machines (food must remain at tables), plays, and award-winning children's books." />
+<a href="http://www.shsu.edu/dotAsset/32bfe22d-61e8-4999-9b3d-a126029e003a.jpg" class="fancybox" rel="gallery" caption="Room 200 is an IT@Sam lab with 79 PCs, 3 Macs, 2 printers, 3 scanners, 2 ADA workstations, 1 projector, and 1 webcam. This room also contains vending machines (food must remain at tables), plays, and award-winning children's books.">
+<img src="http://www.shsu.edu/dotAsset/32bfe22d-61e8-4999-9b3d-a126029e003a.jpg" class="fancybox" rel="gallery" alt="Room 200 is an IT@Sam lab with 79 PCs, 3 Macs, 2 printers, 3 scanners, 2 ADA workstations, 1 projector, and 1 webcam. This room also contains vending machines (food must remain at tables), plays, and award-winning children's books." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/ea89e915-3852-490d-af21-b42f985dbc46.jpg" class="fancybox" rel="prettyPhoto" caption="Map of the library's second floor, which can be entered from the main doors on the building's west side, close to the mall area in front of the LSC.">
-<img src="http://www.shsu.edu/dotAsset/ea89e915-3852-490d-af21-b42f985dbc46.jpg" class="fancybox" rel="prettyPhoto" alt="Map of the library's second floor, which can be entered from the main doors on the building's west side, close to the mall area in front of the LSC." />
+<a href="http://www.shsu.edu/dotAsset/ea89e915-3852-490d-af21-b42f985dbc46.jpg" class="fancybox" rel="gallery" caption="Map of the library's second floor, which can be entered from the main doors on the building's west side, close to the mall area in front of the LSC.">
+<img src="http://www.shsu.edu/dotAsset/ea89e915-3852-490d-af21-b42f985dbc46.jpg" class="fancybox" rel="gallery" alt="Map of the library's second floor, which can be entered from the main doors on the building's west side, close to the mall area in front of the LSC." />
 </a>
 </li>
   
@@ -631,6 +659,7 @@ $(document).ready(function(){
 
 
 
+
 <script type='text/javascript'>
 $(document).ready(function(){
     $('ul.imagegallery img').resizecrop({
@@ -638,9 +667,23 @@ $(document).ready(function(){
       height: 146,
       vertical:"top"
     });  
-    $('a[href$='.jpg'],a[href$='.png'],a[href$='.gif']').attr('rel', 'gallery');
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  }); 
+  });  
+$("a.fancybox")
+$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    .attr('rel', 'gallery')
+    .fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers  : {
+      title  : {
+        type: 'inside'
+      }
+    },
+        margin : [20, 80, 20, 80]
+    });
 </script>
 <style type="text/css">
 .fancybox-nav {width: 60px;}
@@ -659,32 +702,32 @@ $(document).ready(function(){
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/e846d4e3-a790-4fe8-9567-d3baae487eaa.jpg" class="fancybox" rel="prettyPhoto" caption="The third floor houses books with call numbers starting in LS and N through Z; the juvenile/young adult collection in the LS section uses Dewey Decimal call numbers, rather than the Library of Congress call numbers found in the rest of the collection.">
-<img src="http://www.shsu.edu/dotAsset/e846d4e3-a790-4fe8-9567-d3baae487eaa.jpg" class="fancybox" rel="prettyPhoto" alt="The third floor houses books with call numbers starting in LS and N through Z; the juvenile/young adult collection in the LS section uses Dewey Decimal call numbers, rather than the Library of Congress call numbers found in the rest of the collection." />
+<a href="http://www.shsu.edu/dotAsset/e846d4e3-a790-4fe8-9567-d3baae487eaa.jpg" class="fancybox" rel="gallery" caption="The third floor houses books with call numbers starting in LS and N through Z; the juvenile/young adult collection in the LS section uses Dewey Decimal call numbers, rather than the Library of Congress call numbers found in the rest of the collection.">
+<img src="http://www.shsu.edu/dotAsset/e846d4e3-a790-4fe8-9567-d3baae487eaa.jpg" class="fancybox" rel="gallery" alt="The third floor houses books with call numbers starting in LS and N through Z; the juvenile/young adult collection in the LS section uses Dewey Decimal call numbers, rather than the Library of Congress call numbers found in the rest of the collection." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/e135867d-090c-4dd5-8325-dddd979a2c82.jpg" class="fancybox" rel="prettyPhoto" caption="The third floor has lots of study space; this is a 'quiet floor,' so conversation and cell phone use are prohibited.">
-<img src="http://www.shsu.edu/dotAsset/e135867d-090c-4dd5-8325-dddd979a2c82.jpg" class="fancybox" rel="prettyPhoto" alt="The third floor has lots of study space; this is a 'quiet floor,' so conversation and cell phone use are prohibited." />
+<a href="http://www.shsu.edu/dotAsset/e135867d-090c-4dd5-8325-dddd979a2c82.jpg" class="fancybox" rel="gallery" caption="The third floor has lots of study space; this is a 'quiet floor,' so conversation and cell phone use are prohibited.">
+<img src="http://www.shsu.edu/dotAsset/e135867d-090c-4dd5-8325-dddd979a2c82.jpg" class="fancybox" rel="gallery" alt="The third floor has lots of study space; this is a 'quiet floor,' so conversation and cell phone use are prohibited." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/061673cb-6bc7-4f42-909d-af8179940946.jpg" class="fancybox" rel="prettyPhoto" caption="Library materials go to the Stacks Maintenance Office while waiting to be re-shelved; anyone is welcome to check here for an item that is not in its shelf location and not marked in the library catalog as checked out. ">
-<img src="http://www.shsu.edu/dotAsset/061673cb-6bc7-4f42-909d-af8179940946.jpg" class="fancybox" rel="prettyPhoto" alt="Library materials go to the Stacks Maintenance Office while waiting to be re-shelved; anyone is welcome to check here for an item that is not in its shelf location and not marked in the library catalog as checked out. " />
+<a href="http://www.shsu.edu/dotAsset/061673cb-6bc7-4f42-909d-af8179940946.jpg" class="fancybox" rel="gallery" caption="Library materials go to the Stacks Maintenance Office while waiting to be re-shelved; anyone is welcome to check here for an item that is not in its shelf location and not marked in the library catalog as checked out. ">
+<img src="http://www.shsu.edu/dotAsset/061673cb-6bc7-4f42-909d-af8179940946.jpg" class="fancybox" rel="gallery" alt="Library materials go to the Stacks Maintenance Office while waiting to be re-shelved; anyone is welcome to check here for an item that is not in its shelf location and not marked in the library catalog as checked out. " />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/2e2705c2-0ae9-4c09-b636-6b33f74ec78c.jpg" class="fancybox" rel="prettyPhoto" caption="Map of library's third floor. The third floor houses books with call numbers starting in N through Z and the LS call numbers, which consist of juvenile/young adult books.">
-<img src="http://www.shsu.edu/dotAsset/2e2705c2-0ae9-4c09-b636-6b33f74ec78c.jpg" class="fancybox" rel="prettyPhoto" alt="Map of library's third floor. The third floor houses books with call numbers starting in N through Z and the LS call numbers, which consist of juvenile/young adult books." />
+<a href="http://www.shsu.edu/dotAsset/2e2705c2-0ae9-4c09-b636-6b33f74ec78c.jpg" class="fancybox" rel="gallery" caption="Map of library's third floor. The third floor houses books with call numbers starting in N through Z and the LS call numbers, which consist of juvenile/young adult books.">
+<img src="http://www.shsu.edu/dotAsset/2e2705c2-0ae9-4c09-b636-6b33f74ec78c.jpg" class="fancybox" rel="gallery" alt="Map of library's third floor. The third floor houses books with call numbers starting in N through Z and the LS call numbers, which consist of juvenile/young adult books." />
 </a>
 </li>
   
@@ -710,6 +753,7 @@ $(document).ready(function(){
 
 
 
+
 <script type='text/javascript'>
 $(document).ready(function(){
     $('ul.imagegallery img').resizecrop({
@@ -717,9 +761,23 @@ $(document).ready(function(){
       height: 146,
       vertical:"top"
     });  
-    $('a[href$='.jpg'],a[href$='.png'],a[href$='.gif']').attr('rel', 'gallery');
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  }); 
+  });  
+$("a.fancybox")
+$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    .attr('rel', 'gallery')
+    .fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers  : {
+      title  : {
+        type: 'inside'
+      }
+    },
+        margin : [20, 80, 20, 80]
+    });
 </script>
 <style type="text/css">
 .fancybox-nav {width: 60px;}
@@ -738,56 +796,56 @@ $(document).ready(function(){
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/212ca273-45cd-4390-80bd-c42435b1034e.jpg" class="fancybox" rel="prettyPhoto" caption="The Breitenbach Mexican Mask Collection, donated by Professor William Breitenbach, displayed by the central staircase on the fourth floor. This is the fourth largest collection of Mexican masks in the world.">
-<img src="http://www.shsu.edu/dotAsset/212ca273-45cd-4390-80bd-c42435b1034e.jpg" class="fancybox" rel="prettyPhoto" alt="The Breitenbach Mexican Mask Collection, donated by Professor William Breitenbach, displayed by the central staircase on the fourth floor. This is the fourth largest collection of Mexican masks in the world." />
+<a href="http://www.shsu.edu/dotAsset/212ca273-45cd-4390-80bd-c42435b1034e.jpg" class="fancybox" rel="gallery" caption="The Breitenbach Mexican Mask Collection, donated by Professor William Breitenbach, displayed by the central staircase on the fourth floor. This is the fourth largest collection of Mexican masks in the world.">
+<img src="http://www.shsu.edu/dotAsset/212ca273-45cd-4390-80bd-c42435b1034e.jpg" class="fancybox" rel="gallery" alt="The Breitenbach Mexican Mask Collection, donated by Professor William Breitenbach, displayed by the central staircase on the fourth floor. This is the fourth largest collection of Mexican masks in the world." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/08775a8a-b68e-45cf-95c9-3386d6991b1c.jpg" class="fancybox" rel="prettyPhoto" caption="The Adams Reading Room is reserved for use by Honors Students and approved graduate students. It is named after the late Dr. Loyce Adams, a professor of Business Administration who also wrote poetry and novels and was an amateur artist.">
-<img src="http://www.shsu.edu/dotAsset/08775a8a-b68e-45cf-95c9-3386d6991b1c.jpg" class="fancybox" rel="prettyPhoto" alt="The Adams Reading Room is reserved for use by Honors Students and approved graduate students. It is named after the late Dr. Loyce Adams, a professor of Business Administration who also wrote poetry and novels and was an amateur artist." />
+<a href="http://www.shsu.edu/dotAsset/08775a8a-b68e-45cf-95c9-3386d6991b1c.jpg" class="fancybox" rel="gallery" caption="The Adams Reading Room is reserved for use by Honors Students and approved graduate students. It is named after the late Dr. Loyce Adams, a professor of Business Administration who also wrote poetry and novels and was an amateur artist.">
+<img src="http://www.shsu.edu/dotAsset/08775a8a-b68e-45cf-95c9-3386d6991b1c.jpg" class="fancybox" rel="gallery" alt="The Adams Reading Room is reserved for use by Honors Students and approved graduate students. It is named after the late Dr. Loyce Adams, a professor of Business Administration who also wrote poetry and novels and was an amateur artist." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/4073b99d-4f77-4088-9017-d2c818d692a6.jpg" class="fancybox" rel="prettyPhoto" caption="Private study carrels are available for graduate students each semester; a few carrels can also be checked out by other students for 4-hour periods on a 'first-come, first served' basis.">
-<img src="http://www.shsu.edu/dotAsset/4073b99d-4f77-4088-9017-d2c818d692a6.jpg" class="fancybox" rel="prettyPhoto" alt="Private study carrels are available for graduate students each semester; a few carrels can also be checked out by other students for 4-hour periods on a 'first-come, first served' basis." />
+<a href="http://www.shsu.edu/dotAsset/4073b99d-4f77-4088-9017-d2c818d692a6.jpg" class="fancybox" rel="gallery" caption="Private study carrels are available for graduate students each semester; a few carrels can also be checked out by other students for 4-hour periods on a 'first-come, first served' basis.">
+<img src="http://www.shsu.edu/dotAsset/4073b99d-4f77-4088-9017-d2c818d692a6.jpg" class="fancybox" rel="gallery" alt="Private study carrels are available for graduate students each semester; a few carrels can also be checked out by other students for 4-hour periods on a 'first-come, first served' basis." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/608a478d-e55f-489c-bd27-ba108286d941.jpg" class="fancybox" rel="prettyPhoto" caption="A library study carrel provides a quiet, private place to work. Study carrels are available for graduate students each semester; other carrels can be checked out by students for 4-hour periods on a 'first-come, first served' basis.">
-<img src="http://www.shsu.edu/dotAsset/608a478d-e55f-489c-bd27-ba108286d941.jpg" class="fancybox" rel="prettyPhoto" alt="A library study carrel provides a quiet, private place to work. Study carrels are available for graduate students each semester; other carrels can be checked out by students for 4-hour periods on a 'first-come, first served' basis." />
+<a href="http://www.shsu.edu/dotAsset/608a478d-e55f-489c-bd27-ba108286d941.jpg" class="fancybox" rel="gallery" caption="A library study carrel provides a quiet, private place to work. Study carrels are available for graduate students each semester; other carrels can be checked out by students for 4-hour periods on a 'first-come, first served' basis.">
+<img src="http://www.shsu.edu/dotAsset/608a478d-e55f-489c-bd27-ba108286d941.jpg" class="fancybox" rel="gallery" alt="A library study carrel provides a quiet, private place to work. Study carrels are available for graduate students each semester; other carrels can be checked out by students for 4-hour periods on a 'first-come, first served' basis." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/f29ab0c1-da91-44fb-a7e5-36bad9e3fc2e.jpg" class="fancybox" rel="prettyPhoto" caption="Ornate walnut-paneled doors lead to the Thomason Room, home of the library's Special Collections, housing rare, valuable, and fragile materials as well as collections on topics like criminal justice and Samuel Clemens.">
-<img src="http://www.shsu.edu/dotAsset/f29ab0c1-da91-44fb-a7e5-36bad9e3fc2e.jpg" class="fancybox" rel="prettyPhoto" alt="Ornate walnut-paneled doors lead to the Thomason Room, home of the library's Special Collections, housing rare, valuable, and fragile materials as well as collections on topics like criminal justice and Samuel Clemens." />
+<a href="http://www.shsu.edu/dotAsset/f29ab0c1-da91-44fb-a7e5-36bad9e3fc2e.jpg" class="fancybox" rel="gallery" caption="Ornate walnut-paneled doors lead to the Thomason Room, home of the library's Special Collections, housing rare, valuable, and fragile materials as well as collections on topics like criminal justice and Samuel Clemens.">
+<img src="http://www.shsu.edu/dotAsset/f29ab0c1-da91-44fb-a7e5-36bad9e3fc2e.jpg" class="fancybox" rel="gallery" alt="Ornate walnut-paneled doors lead to the Thomason Room, home of the library's Special Collections, housing rare, valuable, and fragile materials as well as collections on topics like criminal justice and Samuel Clemens." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/324d4a70-5e0d-4028-a449-218e27ee8c22.jpg" class="fancybox" rel="prettyPhoto" caption="The University Archives are housed on the library's fourth floor in the far northwest corner. The Archive preserves materials related to the history of SHSU and people connected to the university.">
-<img src="http://www.shsu.edu/dotAsset/324d4a70-5e0d-4028-a449-218e27ee8c22.jpg" class="fancybox" rel="prettyPhoto" alt="The University Archives are housed on the library's fourth floor in the far northwest corner. The Archive preserves materials related to the history of SHSU and people connected to the university." />
+<a href="http://www.shsu.edu/dotAsset/324d4a70-5e0d-4028-a449-218e27ee8c22.jpg" class="fancybox" rel="gallery" caption="The University Archives are housed on the library's fourth floor in the far northwest corner. The Archive preserves materials related to the history of SHSU and people connected to the university.">
+<img src="http://www.shsu.edu/dotAsset/324d4a70-5e0d-4028-a449-218e27ee8c22.jpg" class="fancybox" rel="gallery" alt="The University Archives are housed on the library's fourth floor in the far northwest corner. The Archive preserves materials related to the history of SHSU and people connected to the university." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/98599879-5ece-49e6-8d44-7b32547cf7b8.jpg" class="fancybox" rel="prettyPhoto" caption="Map of the fourth floor. The fourth floor houses books with call numbers starting in A through L (except for LS call numbers, consisting of juvenile/young adult books, which are found on the third floor).">
-<img src="http://www.shsu.edu/dotAsset/98599879-5ece-49e6-8d44-7b32547cf7b8.jpg" class="fancybox" rel="prettyPhoto" alt="Map of the fourth floor. The fourth floor houses books with call numbers starting in A through L (except for LS call numbers, consisting of juvenile/young adult books, which are found on the third floor)." />
+<a href="http://www.shsu.edu/dotAsset/98599879-5ece-49e6-8d44-7b32547cf7b8.jpg" class="fancybox" rel="gallery" caption="Map of the fourth floor. The fourth floor houses books with call numbers starting in A through L (except for LS call numbers, consisting of juvenile/young adult books, which are found on the third floor).">
+<img src="http://www.shsu.edu/dotAsset/98599879-5ece-49e6-8d44-7b32547cf7b8.jpg" class="fancybox" rel="gallery" alt="Map of the fourth floor. The fourth floor houses books with call numbers starting in A through L (except for LS call numbers, consisting of juvenile/young adult books, which are found on the third floor)." />
 </a>
 </li>
   
@@ -813,6 +871,7 @@ $(document).ready(function(){
 
 
 
+
 <script type='text/javascript'>
 $(document).ready(function(){
     $('ul.imagegallery img').resizecrop({
@@ -820,9 +879,23 @@ $(document).ready(function(){
       height: 146,
       vertical:"top"
     });  
-    $('a[href$='.jpg'],a[href$='.png'],a[href$='.gif']').attr('rel', 'gallery');
-    $("a[rel^='prettyPhoto']").prettyPhoto();
-  }); 
+  });  
+$("a.fancybox")
+$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+    .attr('rel', 'gallery')
+    .fancybox({
+        beforeLoad: function() {
+            this.title = $(this.element).attr('caption');
+        },
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers  : {
+      title  : {
+        type: 'inside'
+      }
+    },
+        margin : [20, 80, 20, 80]
+    });
 </script>
 <style type="text/css">
 .fancybox-nav {width: 60px;}
@@ -841,112 +914,112 @@ $(document).ready(function(){
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/eebf201e-98f9-4252-8db8-98ceea063081.jpg" class="fancybox" rel="prettyPhoto" caption="Two elevators face the central staircase on the south side of every floor in the library.">
-<img src="http://www.shsu.edu/dotAsset/eebf201e-98f9-4252-8db8-98ceea063081.jpg" class="fancybox" rel="prettyPhoto" alt="Two elevators face the central staircase on the south side of every floor in the library." />
+<a href="http://www.shsu.edu/dotAsset/eebf201e-98f9-4252-8db8-98ceea063081.jpg" class="fancybox" rel="gallery" caption="Two elevators face the central staircase on the south side of every floor in the library.">
+<img src="http://www.shsu.edu/dotAsset/eebf201e-98f9-4252-8db8-98ceea063081.jpg" class="fancybox" rel="gallery" alt="Two elevators face the central staircase on the south side of every floor in the library." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/1b8c2918-68e9-452e-8033-8786d3551668.jpg" class="fancybox" rel="prettyPhoto" caption="The Government Documents room contains documents from the United States and Texas governments. Newton Gresham Library is a depository library for government documents.">
-<img src="http://www.shsu.edu/dotAsset/1b8c2918-68e9-452e-8033-8786d3551668.jpg" class="fancybox" rel="prettyPhoto" alt="The Government Documents room contains documents from the United States and Texas governments. Newton Gresham Library is a depository library for government documents." />
+<a href="http://www.shsu.edu/dotAsset/1b8c2918-68e9-452e-8033-8786d3551668.jpg" class="fancybox" rel="gallery" caption="The Government Documents room contains documents from the United States and Texas governments. Newton Gresham Library is a depository library for government documents.">
+<img src="http://www.shsu.edu/dotAsset/1b8c2918-68e9-452e-8033-8786d3551668.jpg" class="fancybox" rel="gallery" alt="The Government Documents room contains documents from the United States and Texas governments. Newton Gresham Library is a depository library for government documents." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/dc86d86c-e49f-4932-a56e-638eec22708b.jpg" class="fancybox" rel="prettyPhoto" caption="The first floor's western hallway leads to classrooms 155 and 157. Librarians use these rooms to teach hands-on classes about using library resources. These are not public labs.">
-<img src="http://www.shsu.edu/dotAsset/dc86d86c-e49f-4932-a56e-638eec22708b.jpg" class="fancybox" rel="prettyPhoto" alt="The first floor's western hallway leads to classrooms 155 and 157. Librarians use these rooms to teach hands-on classes about using library resources. These are not public labs." />
+<a href="http://www.shsu.edu/dotAsset/dc86d86c-e49f-4932-a56e-638eec22708b.jpg" class="fancybox" rel="gallery" caption="The first floor's western hallway leads to classrooms 155 and 157. Librarians use these rooms to teach hands-on classes about using library resources. These are not public labs.">
+<img src="http://www.shsu.edu/dotAsset/dc86d86c-e49f-4932-a56e-638eec22708b.jpg" class="fancybox" rel="gallery" alt="The first floor's western hallway leads to classrooms 155 and 157. Librarians use these rooms to teach hands-on classes about using library resources. These are not public labs." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/00b336f7-eefc-4487-8535-ecc3bb522637.jpg" class="fancybox" rel="prettyPhoto" caption="The Microforms Room contains microfilm, microfiche, and machines for viewing and making copies of microforms. The Microforms Room also contains a stand-alone computer where people not affiliated with SHSU may use word processing software.">
-<img src="http://www.shsu.edu/dotAsset/00b336f7-eefc-4487-8535-ecc3bb522637.jpg" class="fancybox" rel="prettyPhoto" alt="The Microforms Room contains microfilm, microfiche, and machines for viewing and making copies of microforms. The Microforms Room also contains a stand-alone computer where people not affiliated with SHSU may use word processing software." />
+<a href="http://www.shsu.edu/dotAsset/00b336f7-eefc-4487-8535-ecc3bb522637.jpg" class="fancybox" rel="gallery" caption="The Microforms Room contains microfilm, microfiche, and machines for viewing and making copies of microforms. The Microforms Room also contains a stand-alone computer where people not affiliated with SHSU may use word processing software.">
+<img src="http://www.shsu.edu/dotAsset/00b336f7-eefc-4487-8535-ecc3bb522637.jpg" class="fancybox" rel="gallery" alt="The Microforms Room contains microfilm, microfiche, and machines for viewing and making copies of microforms. The Microforms Room also contains a stand-alone computer where people not affiliated with SHSU may use word processing software." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/ffa95aad-610c-43f7-ac44-0de7e25f6036.jpg" class="fancybox" rel="prettyPhoto" caption="The Microforms Room provides machines for viewing microforms; certain machines can print copies of the microforms. You can ask at the service window in the Copy Services Room for assistance with finding microforms, using readers, and making copies.">
-<img src="http://www.shsu.edu/dotAsset/ffa95aad-610c-43f7-ac44-0de7e25f6036.jpg" class="fancybox" rel="prettyPhoto" alt="The Microforms Room provides machines for viewing microforms; certain machines can print copies of the microforms. You can ask at the service window in the Copy Services Room for assistance with finding microforms, using readers, and making copies." />
+<a href="http://www.shsu.edu/dotAsset/ffa95aad-610c-43f7-ac44-0de7e25f6036.jpg" class="fancybox" rel="gallery" caption="The Microforms Room provides machines for viewing microforms; certain machines can print copies of the microforms. You can ask at the service window in the Copy Services Room for assistance with finding microforms, using readers, and making copies.">
+<img src="http://www.shsu.edu/dotAsset/ffa95aad-610c-43f7-ac44-0de7e25f6036.jpg" class="fancybox" rel="gallery" alt="The Microforms Room provides machines for viewing microforms; certain machines can print copies of the microforms. You can ask at the service window in the Copy Services Room for assistance with finding microforms, using readers, and making copies." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/35e9da66-97c5-40c7-8e25-cc8a33a8b6a5.jpg" class="fancybox" rel="prettyPhoto" caption="The Microforms Room provides machines for viewing microforms; certain machines can print copies of microforms for 25 cents per page.">
-<img src="http://www.shsu.edu/dotAsset/35e9da66-97c5-40c7-8e25-cc8a33a8b6a5.jpg" class="fancybox" rel="prettyPhoto" alt="The Microforms Room provides machines for viewing microforms; certain machines can print copies of microforms for 25 cents per page." />
+<a href="http://www.shsu.edu/dotAsset/35e9da66-97c5-40c7-8e25-cc8a33a8b6a5.jpg" class="fancybox" rel="gallery" caption="The Microforms Room provides machines for viewing microforms; certain machines can print copies of microforms for 25 cents per page.">
+<img src="http://www.shsu.edu/dotAsset/35e9da66-97c5-40c7-8e25-cc8a33a8b6a5.jpg" class="fancybox" rel="gallery" alt="The Microforms Room provides machines for viewing microforms; certain machines can print copies of microforms for 25 cents per page." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/df281005-93ee-4b9f-a68d-f1e2dfc3d437.jpg" class="fancybox" rel="prettyPhoto" caption="Library computer technicians' office. Various for-fee services like poster printing can be obtained here.">
-<img src="http://www.shsu.edu/dotAsset/df281005-93ee-4b9f-a68d-f1e2dfc3d437.jpg" class="fancybox" rel="prettyPhoto" alt="Library computer technicians' office. Various for-fee services like poster printing can be obtained here." />
+<a href="http://www.shsu.edu/dotAsset/df281005-93ee-4b9f-a68d-f1e2dfc3d437.jpg" class="fancybox" rel="gallery" caption="Library computer technicians' office. Various for-fee services like poster printing can be obtained here.">
+<img src="http://www.shsu.edu/dotAsset/df281005-93ee-4b9f-a68d-f1e2dfc3d437.jpg" class="fancybox" rel="gallery" alt="Library computer technicians' office. Various for-fee services like poster printing can be obtained here." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/da092f65-2862-408f-98f5-1a687eaaaaf3.jpg" class="fancybox" rel="prettyPhoto" caption="The Satellite Circulation Desk is conveniently located at the north end of the first floor hallway beside a public entrance/exit. Patrons may check out and return books here.">
-<img src="http://www.shsu.edu/dotAsset/da092f65-2862-408f-98f5-1a687eaaaaf3.jpg" class="fancybox" rel="prettyPhoto" alt="The Satellite Circulation Desk is conveniently located at the north end of the first floor hallway beside a public entrance/exit. Patrons may check out and return books here." />
+<a href="http://www.shsu.edu/dotAsset/da092f65-2862-408f-98f5-1a687eaaaaf3.jpg" class="fancybox" rel="gallery" caption="The Satellite Circulation Desk is conveniently located at the north end of the first floor hallway beside a public entrance/exit. Patrons may check out and return books here.">
+<img src="http://www.shsu.edu/dotAsset/da092f65-2862-408f-98f5-1a687eaaaaf3.jpg" class="fancybox" rel="gallery" alt="The Satellite Circulation Desk is conveniently located at the north end of the first floor hallway beside a public entrance/exit. Patrons may check out and return books here." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/7d7a9221-6629-4bab-a8be-5373f79730a0.jpg" class="fancybox" rel="prettyPhoto" caption="Map of library's first floor. The first floor contains all library copy machines (in Copy Services) and most M call numbers (in the Music Listening Room).">
-<img src="http://www.shsu.edu/dotAsset/7d7a9221-6629-4bab-a8be-5373f79730a0.jpg" class="fancybox" rel="prettyPhoto" alt="Map of library's first floor. The first floor contains all library copy machines (in Copy Services) and most M call numbers (in the Music Listening Room)." />
+<a href="http://www.shsu.edu/dotAsset/7d7a9221-6629-4bab-a8be-5373f79730a0.jpg" class="fancybox" rel="gallery" caption="Map of library's first floor. The first floor contains all library copy machines (in Copy Services) and most M call numbers (in the Music Listening Room).">
+<img src="http://www.shsu.edu/dotAsset/7d7a9221-6629-4bab-a8be-5373f79730a0.jpg" class="fancybox" rel="gallery" alt="Map of library's first floor. The first floor contains all library copy machines (in Copy Services) and most M call numbers (in the Music Listening Room)." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/ee02db8c-113c-41a5-a5b7-157071e11dea.jpg" class="fancybox" rel="prettyPhoto" caption="The Copy Services center, on the first floor, is where you will find all of the photocopiers for public use in the library. Copies cost 10 cents per page. You can also purchase color printing and other services from Copy Services.">
-<img src="http://www.shsu.edu/dotAsset/ee02db8c-113c-41a5-a5b7-157071e11dea.jpg" class="fancybox" rel="prettyPhoto" alt="The Copy Services center, on the first floor, is where you will find all of the photocopiers for public use in the library. Copies cost 10 cents per page. You can also purchase color printing and other services from Copy Services." />
+<a href="http://www.shsu.edu/dotAsset/ee02db8c-113c-41a5-a5b7-157071e11dea.jpg" class="fancybox" rel="gallery" caption="The Copy Services center, on the first floor, is where you will find all of the photocopiers for public use in the library. Copies cost 10 cents per page. You can also purchase color printing and other services from Copy Services.">
+<img src="http://www.shsu.edu/dotAsset/ee02db8c-113c-41a5-a5b7-157071e11dea.jpg" class="fancybox" rel="gallery" alt="The Copy Services center, on the first floor, is where you will find all of the photocopiers for public use in the library. Copies cost 10 cents per page. You can also purchase color printing and other services from Copy Services." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/9ebf28e0-6b9a-49b5-a61a-51f27b95ff9e.jpg" class="fancybox" rel="prettyPhoto" caption="Copy Services is more than just copying. You can get change; send and receive faxes; get color printouts, color copies, and transparencies; or purchase laminating and binding services. Copy Services personnel will assist you.">
-<img src="http://www.shsu.edu/dotAsset/9ebf28e0-6b9a-49b5-a61a-51f27b95ff9e.jpg" class="fancybox" rel="prettyPhoto" alt="Copy Services is more than just copying. You can get change; send and receive faxes; get color printouts, color copies, and transparencies; or purchase laminating and binding services. Copy Services personnel will assist you." />
+<a href="http://www.shsu.edu/dotAsset/9ebf28e0-6b9a-49b5-a61a-51f27b95ff9e.jpg" class="fancybox" rel="gallery" caption="Copy Services is more than just copying. You can get change; send and receive faxes; get color printouts, color copies, and transparencies; or purchase laminating and binding services. Copy Services personnel will assist you.">
+<img src="http://www.shsu.edu/dotAsset/9ebf28e0-6b9a-49b5-a61a-51f27b95ff9e.jpg" class="fancybox" rel="gallery" alt="Copy Services is more than just copying. You can get change; send and receive faxes; get color printouts, color copies, and transparencies; or purchase laminating and binding services. Copy Services personnel will assist you." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/33d39521-5d28-453b-af3a-c0368631f518.jpg" class="fancybox" rel="prettyPhoto" caption="The Interlibrary Services office handles incoming/outgoing interlibrary loan, as well as distance student library services. If you borrow a book from another library through interlibrary loan, you will pick up and return the book in this office.">
-<img src="http://www.shsu.edu/dotAsset/33d39521-5d28-453b-af3a-c0368631f518.jpg" class="fancybox" rel="prettyPhoto" alt="The Interlibrary Services office handles incoming/outgoing interlibrary loan, as well as distance student library services. If you borrow a book from another library through interlibrary loan, you will pick up and return the book in this office." />
+<a href="http://www.shsu.edu/dotAsset/33d39521-5d28-453b-af3a-c0368631f518.jpg" class="fancybox" rel="gallery" caption="The Interlibrary Services office handles incoming/outgoing interlibrary loan, as well as distance student library services. If you borrow a book from another library through interlibrary loan, you will pick up and return the book in this office.">
+<img src="http://www.shsu.edu/dotAsset/33d39521-5d28-453b-af3a-c0368631f518.jpg" class="fancybox" rel="gallery" alt="The Interlibrary Services office handles incoming/outgoing interlibrary loan, as well as distance student library services. If you borrow a book from another library through interlibrary loan, you will pick up and return the book in this office." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/61f0f277-8a0e-4f68-b6e4-fd3aa2470da8.jpg" class="fancybox" rel="prettyPhoto" caption="After entering through the doors on the building's north side, this stairwell on your right will take you to the second floor Reference section and main lobby, then continue up to the third and fourth floors.">
-<img src="http://www.shsu.edu/dotAsset/61f0f277-8a0e-4f68-b6e4-fd3aa2470da8.jpg" class="fancybox" rel="prettyPhoto" alt="After entering through the doors on the building's north side, this stairwell on your right will take you to the second floor Reference section and main lobby, then continue up to the third and fourth floors." />
+<a href="http://www.shsu.edu/dotAsset/61f0f277-8a0e-4f68-b6e4-fd3aa2470da8.jpg" class="fancybox" rel="gallery" caption="After entering through the doors on the building's north side, this stairwell on your right will take you to the second floor Reference section and main lobby, then continue up to the third and fourth floors.">
+<img src="http://www.shsu.edu/dotAsset/61f0f277-8a0e-4f68-b6e4-fd3aa2470da8.jpg" class="fancybox" rel="gallery" alt="After entering through the doors on the building's north side, this stairwell on your right will take you to the second floor Reference section and main lobby, then continue up to the third and fourth floors." />
 </a>
 </li>
 
 
 
   <li style="margin-left:4px;">
-<a href="http://www.shsu.edu/dotAsset/de0ef67f-a1cd-4034-8e06-1085dc9132fe.jpg" class="fancybox" rel="prettyPhoto" caption="The Music Listening Room holds all of the library's audio/visual material (CDs, cassettes, phonograph records, DVDs, VHS, laser discs, etc.) and printed scores, as well as many of the books with call numbers starting with M.">
-<img src="http://www.shsu.edu/dotAsset/de0ef67f-a1cd-4034-8e06-1085dc9132fe.jpg" class="fancybox" rel="prettyPhoto" alt="The Music Listening Room holds all of the library's audio/visual material (CDs, cassettes, phonograph records, DVDs, VHS, laser discs, etc.) and printed scores, as well as many of the books with call numbers starting with M." />
+<a href="http://www.shsu.edu/dotAsset/de0ef67f-a1cd-4034-8e06-1085dc9132fe.jpg" class="fancybox" rel="gallery" caption="The Music Listening Room holds all of the library's audio/visual material (CDs, cassettes, phonograph records, DVDs, VHS, laser discs, etc.) and printed scores, as well as many of the books with call numbers starting with M.">
+<img src="http://www.shsu.edu/dotAsset/de0ef67f-a1cd-4034-8e06-1085dc9132fe.jpg" class="fancybox" rel="gallery" alt="The Music Listening Room holds all of the library's audio/visual material (CDs, cassettes, phonograph records, DVDs, VHS, laser discs, etc.) and printed scores, as well as many of the books with call numbers starting with M." />
 </a>
 </li>
   
