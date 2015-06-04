@@ -18,26 +18,26 @@
 <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
 
 <script type="text/javascript">
-jQuery(document).ready(function() {
-  jQuery("#campustools").click(function () { 
-    jQuery(".campustools").toggle();
-    jQuery(".fastlinks").hide(); //hides the other dropdown when this one is clicked
+$(document).ready(function() {
+  $("#campustools").click(function () { 
+    $(".campustools").toggle();
+    $(".fastlinks").hide(); //hides the other dropdown when this one is clicked
   });
-  jQuery("#fastlinks").click(function () { 
-    jQuery(".fastlinks").toggle();
-    jQuery(".campustools").hide();//hides the other dropdown when this one is clicked
+  $("#fastlinks").click(function () { 
+    $(".fastlinks").toggle();
+    $(".campustools").hide();//hides the other dropdown when this one is clicked
   });
-  jQuery('html').click(function() { //registers a click event anywhere on the document 
-      jQuery(".dropdown").hide();   //hideas all dropdowns when you click the mouse anywhere 
+  $('html').click(function() { //registers a click event anywhere on the document 
+      $(".dropdown").hide();   //hideas all dropdowns when you click the mouse anywhere 
    }); 
- jQuery('.dropdown-btn').click(function(event){
+ $('.dropdown-btn').click(function(event){
      event.stopPropagation(); //stops the above action if the click is on either dropdown
  });
 });
 </script>
 <script type="text/javascript">
-  jQuery(document).ready( function() {
-    jQuery("#crumbs ul li:last-child").addClass('last');
+  $(document).ready( function() {
+    $("#crumbs ul li:last-child").addClass('last');
 });
 </script>
 
@@ -366,8 +366,8 @@ jQuery(document).ready(function() {
 
 
 <script type="text/javascript" src="http://www.shsu.edu/scripts/resizecrop.min.js"></script>
-<script type="text/javascript" src="http://www.shsu.edu/scripts/fancybox/jquery.fancybox.js"></script>
-<link rel="stylesheet" type="text/css" href="http://www.shsu.edu/scripts/fancybox/jquery.fancybox.css" media="screen" />
+<script type="text/javascript" src="http://www.shsu.edu/scripts/fancybox/$.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.shsu.edu/scripts/fancybox/$.fancybox.css" media="screen" />
 
 <style>
 #left-col #primary-content ul.imagegallery li { 
@@ -378,16 +378,16 @@ margin-bottom: 8px;
 
 
 <script type='text/javascript'>
-jQuery(document).ready(function(){
-    jQuery('ul.imagegallery img').resizecrop({
+$(document).ready(function(){
+    $('ul.imagegallery img').resizecrop({
       width: 146,
       height: 146,
       vertical:"top"
     });  
     
-    jQuery(".fancybox").fancybox({
+    $(".fancybox").fancybox({
         beforeLoad: function() {
-            this.title = jQuery(this.element).attr('caption');
+            this.title = $(this.element).attr('caption');
         },
     prevEffect  : 'none',
     nextEffect  : 'none',
@@ -399,7 +399,7 @@ jQuery(document).ready(function(){
         margin : [20, 80, 20, 80]
     });
     
-      jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery');
   });  
 
@@ -491,16 +491,16 @@ jQuery(document).ready(function(){
 
 
 <script type='text/javascript'>
-jQuery(document).ready(function(){
-    jQuery('ul.imagegallery img').resizecrop({
+$(document).ready(function(){
+    $('ul.imagegallery img').resizecrop({
       width: 146,
       height: 146,
       vertical:"top"
     });  
     
-    jQuery(".fancybox").fancybox({
+    $(".fancybox").fancybox({
         beforeLoad: function() {
-            this.title = jQuery(this.element).attr('caption');
+            this.title = $(this.element).attr('caption');
         },
     prevEffect  : 'none',
     nextEffect  : 'none',
@@ -512,7 +512,7 @@ jQuery(document).ready(function(){
         margin : [20, 80, 20, 80]
     });
     
-      jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery');
   }); 
 </script>
@@ -666,16 +666,16 @@ jQuery(document).ready(function(){
 
 
 <script type='text/javascript'>
-jQuery(document).ready(function(){
-    jQuery('ul.imagegallery img').resizecrop({
+$(document).ready(function(){
+    $('ul.imagegallery img').resizecrop({
       width: 146,
       height: 146,
       vertical:"top"
     });  
     
-    jQuery(".fancybox").fancybox({
+    $(".fancybox").fancybox({
         beforeLoad: function() {
-            this.title = jQuery(this.element).attr('caption');
+            this.title = $(this.element).attr('caption');
         },
     prevEffect  : 'none',
     nextEffect  : 'none',
@@ -687,7 +687,7 @@ jQuery(document).ready(function(){
         margin : [20, 80, 20, 80]
     });
     
-      jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery');
   }); 
 </script>
@@ -761,16 +761,16 @@ jQuery(document).ready(function(){
 
 
 <script type='text/javascript'>
-jQuery(document).ready(function(){
-    jQuery('ul.imagegallery img').resizecrop({
+$(document).ready(function(){
+    $('ul.imagegallery img').resizecrop({
       width: 146,
       height: 146,
       vertical:"top"
     });  
     
-    jQuery(".fancybox").fancybox({
+    $(".fancybox").fancybox({
         beforeLoad: function() {
-            this.title = jQuery(this.element).attr('caption');
+            this.title = $(this.element).attr('caption');
         },
     prevEffect  : 'none',
     nextEffect  : 'none',
@@ -782,7 +782,7 @@ jQuery(document).ready(function(){
         margin : [20, 80, 20, 80]
     });
     
-      jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery');
   }); 
 </script>
@@ -880,16 +880,16 @@ jQuery(document).ready(function(){
 
 
 <script type='text/javascript'>
-jQuery(document).ready(function(){
-    jQuery('ul.imagegallery img').resizecrop({
+$(document).ready(function(){
+    $('ul.imagegallery img').resizecrop({
       width: 146,
       height: 146,
       vertical:"top"
     });  
     
-    jQuery(".fancybox").fancybox({
+    $(".fancybox").fancybox({
         beforeLoad: function() {
-            this.title = jQuery(this.element).attr('caption');
+            this.title = $(this.element).attr('caption');
         },
     prevEffect  : 'none',
     nextEffect  : 'none',
@@ -901,7 +901,7 @@ jQuery(document).ready(function(){
         margin : [20, 80, 20, 80]
     });
     
-      jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
+      $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']")
     .attr('rel', 'gallery');
   }); 
 </script>
