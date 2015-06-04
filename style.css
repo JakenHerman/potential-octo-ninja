@@ -1,18 +1,3 @@
-@import "bourbon";
-
-$green: #1ff042;
-
-@include keyframes(cursor-blink) {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
 
 body{
   background-color: black;
@@ -47,7 +32,7 @@ body{
 	padding: 4rem;
 
 	.prompt{
-		color: $green;
+		color: #1ff042;
 		display: block;
 		font-family: 'AndaleMono', monospace;
 		font-weight: bold;
@@ -73,8 +58,8 @@ body{
 			width: 0.75em;
 			height: 1em;
 			margin-left: 5px;
-			background: $green;
-			box-shadow: 1px 1px 1px rgba($green,0.65), -1px -1px 1px rgba($green,0.65), 1px -1px 1px rgba($green,0.65), -1px 1px 1px rgba($green,0.65);
+			background: #1ff042;
+			box-shadow: 1px 1px 1px rgba(#1ff042,0.65), -1px -1px 1px rgba(#1ff042,0.65), 1px -1px 1px rgba(#1ff042,0.65), -1px 1px 1px rgba(#1ff042,0.65);
 			@include animation(cursor-blink 1.25s steps(1) infinite);
 			content: '';
 		}
